@@ -21,7 +21,7 @@ feature_row:
   - image_path: /assets/images/coding.jpg
     alt: "fully responsive"
     title: "Code"
-    excerpt: "Solutions to daily challenging and complex problems. Techniques used by developers in daily softwares and including geospatial hacking."
+    excerpt: "Solutions to daily challenging and complex problems. Techniques used by developers in programming, including geospatial hacking."
     url: "/docs/layouts/"
     btn_class: "btn--primary"
     btn_label: "Learn more"
