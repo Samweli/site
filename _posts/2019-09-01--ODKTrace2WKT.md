@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 comments: true
 title: Converting ODK location data to WKT in QGIS
 published: true

@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 comments: true
 title: Using AI in Trash Detection
 published: true

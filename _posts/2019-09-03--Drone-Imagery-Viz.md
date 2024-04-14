@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 comments: true
 title: Visualizing Dar es salaam City Drone Imagery
 published: true
@@ -10,7 +10,7 @@ published: true
 
 _Drone Imagery Map_
 
-## Visualizing Dar es salaam drone imagery
+## Visualizing Dar es salaam drone imagery 2
 At the end of 2017 The World Bank Tanzania helped in collecting drone imagery in Dar es salaam as per request of 
 [DART](https://www.dart.go.tz/) (Dar Rapid Transit).
 

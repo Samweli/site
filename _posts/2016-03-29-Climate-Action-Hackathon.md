@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 comments: true
 title: Climate Action Hackathon
 published: true

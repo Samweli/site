@@ -1,13 +1,13 @@
 # main links
 main:
   - title: "Home"
-    url: /home/
+    url: /
   - title: "Software"
     url: /softwares/
   - title: "Maps"
     url: /maps/
   - title: "Posts"
-    url: /posts/
+    url: /year-archive/
   - title: "About"
     url: /about/
   - title: "Contact"

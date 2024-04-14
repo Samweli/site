@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 comments: true
 title: Developing Twaamtaro (Adopt a Drain)
 published: true

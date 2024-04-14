@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: single
 comments: true
 title: Isochrone Maps Creation in QGIS
 published: true
