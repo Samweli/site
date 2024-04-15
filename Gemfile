@@ -1,7 +1,8 @@
 source "https://rubygems.org"
 gemspec
 
-gem "github-pages", "~> GITHUB-PAGES-VERSION", group: :jekyll_plugins
+gem "github-pages", group: :jekyll_plugins
+gem "jekyll-include-cache", group: :jekyll_plugins
 
 gem "parser", "~> 3.3"
 
