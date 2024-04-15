@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.3">Jekyll</generator><link href="http://0.0.0.0:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://0.0.0.0:4000/" rel="alternate" type="text/html" /><updated>2024-04-15T19:31:43+00:00</updated><id>http://0.0.0.0:4000/feed.xml</id><title type="html">Embracing and exploring tech world</title><subtitle>Observing life from a software perspective.</subtitle><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><entry><title type="html">Visualizing Dar es salaam City Drone Imagery</title><link href="http://0.0.0.0:4000/Drone-Imagery-Viz/" rel="alternate" type="text/html" title="Visualizing Dar es salaam City Drone Imagery" /><published>2019-09-03T00:00:00+00:00</published><updated>2019-09-03T00:00:00+00:00</updated><id>http://0.0.0.0:4000/-Drone-Imagery-Viz</id><content type="html" xml:base="http://0.0.0.0:4000/Drone-Imagery-Viz/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/dar-drone-imagery-viz.png)
+
+_Drone Imagery Map_
+
+## Visualizing Dar es salaam drone imagery 2
+At the end of 2017 The World Bank Tanzania helped in collecting drone imagery in Dar es salaam as per request of 
+[DART](https://www.dart.go.tz/) (Dar Rapid Transit).
+
+The activity covered all areas that are nearby all the planned BRT (Bus Rapid Transit) routes.
+
+After successful imagery data collection, next it was required to visualize the collected data, 
+one of the challenges in this was the raw data was too large to load in a normal computer, it took long time to view it,
+ also the data format (geotiff) requires special GIS applications (most are desktop based) to access and view,
+ this constrained users to first install those applications in order to view the data. 
+
+These challenges raised a need to develop other tool (web based) in order to simplify data access and use.
+
+As part of the World Bank Tanzania team which supported DART to collect the data I was tasked to create visualization for the drone imagery.
+
+I decided to use [Mapbox GL](https://docs.mapbox.com/mapbox-gl-js/overview/) to build the web map which shows the imagery.
+
+The result was a high perfomance and easily accessible web map. You can view it [here](http://brt-viz.herokuapp.com/)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Converting ODK location data to WKT in QGIS</title><link href="http://0.0.0.0:4000/ODKTrace2WKT/" rel="alternate" type="text/html" title="Converting ODK location data to WKT in QGIS" /><published>2019-09-01T00:00:00+00:00</published><updated>2019-09-01T00:00:00+00:00</updated><id>http://0.0.0.0:4000/-ODKTrace2WKT</id><content type="html" xml:base="http://0.0.0.0:4000/ODKTrace2WKT/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/odktrace2wkt.png)
+
+_Plugin interface_
+
+## Loading ODK location data in QGIS
+
+ODK is now widely used in collecting location data, one of its use case is the project called Ramani Huria (Open Map) which use ODK to map Dar es salaam city drains. One of the challenges in using ODK to collect linestring data is the format that it save the data into (geotrace), the format currently is not a standard that is supported in GIS applications.
+
+This cause issues in importing the data into GIS applications for use after collection. Ramani Huria team was faced with this problem and they wrote script that convert the data from geotrace to Well-Known text format which is widely used standard. 
+
+The issue with scripts is they are not very user friendly, so they gave me a task to work on building a QGIS plugin which will be easy for a normal user to use.
+
+I developed the plugin by building upon the work that Ramani Huria had already started. Since the team had a [script](https://github.com/ivangayton/ODK_geotrace_to_WKT/blob/master/lines_to_wkt.py) written in python.
+
+The plugin works on  all QGIS 3 versions.
+To use it, open QGIS Desktop, then click Plugins menu -> Manage and Install plugins, search for ODKTrace2WKT, click Install.
+
+After installing is finished, an icon of blue arrow will be added to the QGIS plugins panel, click it to load the plugin.
+[How to use video](https://www.youtube.com/watch?v=GvxkoVP0-Dc)
+
+
+[Plugin repository](https://plugins.qgis.org/plugins/odktrace2wkt/)
+
+[Source code](https://github.com/Samweli/odktrace2wkt)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Using AI in Trash Detection</title><link href="http://0.0.0.0:4000/AI-Trash-Detection/" rel="alternate" type="text/html" title="Using AI in Trash Detection" /><published>2019-08-25T00:00:00+00:00</published><updated>2019-08-25T00:00:00+00:00</updated><id>http://0.0.0.0:4000/AI-Trash-Detection</id><content type="html" xml:base="http://0.0.0.0:4000/AI-Trash-Detection/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/trash-detector.png)
+
+_Trash detection web application interface_
+
+## Building web application to detect trash in images
+
+After trash mapping activity [here](http://samweli.github.io/Trash-Map/), some of the collected trash images didn't 
+contain waste, this occured because some of the images were for legal dump sites.
+
+During the collection activity the data wasn't tagged whether it contained illegal dump sites or legal dump sites or both.
+
+So I built a simple web application that helps in detecting waste from an image. This was for a purpose of tagging images 
+from the mapping activity whether they contain waste or not.
+
+The result application can be found [here](http://trash-detection.herokuapp.com/).
+
+I then ran the toool on all the image, and the result analysis can be seen in this [visualization](http://dar-trash-viz.herokuapp.com/)
+under Analysis Menu with "Trash tagging" item.
+
+A rough approximation on the tool is that 6 out of 10 images the tool did a right guess.]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">The Making of Trash Data Visualization</title><link href="http://0.0.0.0:4000/Trash-Map/" rel="alternate" type="text/html" title="The Making of Trash Data Visualization" /><published>2018-09-29T00:00:00+00:00</published><updated>2018-09-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Trash-Map</id><content type="html" xml:base="http://0.0.0.0:4000/Trash-Map/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/trash_map.png)
+
+_Online Trash Map_
+
+## Introduction
+
+In August 2018 [HOT](https://www.hotosm.org) together with [Nipe Fagio](http://nipefagio.co.tz) organized waste data collection activity, using more than 100 students/mappers to locate and collect information about the types of piles in the Dar es salaam City.
+
+The aim of this activity was to raise awareness to the responsible institutions for waste management about the importance of usage of data in decision and policy making, and also to showcase how waste data can be used to measure and evaluate the waste collection problem in Dar es salaam.
+
+The activity resulted into collection of more than 10,000 waste piles. After the activity the HOT team presented the data to  [TURP](https://www.worldbank.org/en/programs/tanzania-urban-resilience-program).
+
+## Visualizing the trash data
+
+As part of TURP team I was given the task of visualizing the trash data, nearly 10,000 points, I decided to use [Mapbox GL JS](https://docs.mapbox.com/mapbox-gl-js/api/) together with [React](https://reactjs.org/) technologies, creating a vector based map this resulted into high loading page performance as all the points didn't took much time to render compared if I would have chosen to create a raster based map.
+
+
+
+[Source code](https://github.com/ResilientDar/dar-trash-viz/)
+
+[Site](http://dar-trash-viz.herokuapp.com/)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Developing Twaamtaro (Adopt a Drain)</title><link href="http://0.0.0.0:4000/Twaamtaro/" rel="alternate" type="text/html" title="Developing Twaamtaro (Adopt a Drain)" /><published>2017-01-30T00:00:00+00:00</published><updated>2017-01-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Twaamtaro</id><content type="html" xml:base="http://0.0.0.0:4000/Twaamtaro/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/twaamtaro_logo.png)
+
+## Twaamtaro Tanzania
+
+Online platform that tracks local drain cleanliness & information on solid waste deposits.
+Inspired by Adopt a Drain from Code for America!.
+
+### Background
+Waste cleanness in Dar es salaam drains is rarely done, and when it is done, there is lack of dissemination of the work and drains status to respective leaders and stakeholders. There is always a need to raise community engagement in drains cleaning and to find innovative ways that can enable provision of reports on drains cleaness to the community.
+
+### Leverage
+
+Community mapping project ‘ramani huria’ has collected the available data on the drainage network. These are available and  can be  found on openstreetmap, these data shows that the network has not covered the large part of the city and from different reports it is not frequently maintained in the areas it has covered. More details can be found [here](http://ramanihuria.org/mapping-drainage-in-dar-es-salaam/)
+
+Building on this work, arrangements were made to organize the community to frequently clean these drains so as to help water flow especially on flood prone areas, this went in parallel with development of application to monitor, store and show drains information called Twaa mtaro (Adopt a drain).
+
+Twaamtaro as a platform enables the community to report about cleaness activities that are done on drains, it does this by letting users send drains information through SMS, USSD and WEB, this enables even the average citizen who does not have access to the Internet to be able to use the platform.
+
+The workflow is citizen are assigned drains by the street leaders, they receive SMS notification from the platform, when the finish cleaning they can send SMS or use USSD or login into the online twaamtaro site and update the status of their drains.
+
+
+![Twaamtaro in action](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/twaamtaro_in_action.png)
+
+_Twaamtaro in action_
+
+![Me presenting Twaamtaro to World Bank Tanzania Staffs](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/twaamtaro_pres.jpg)
+
+_Me presenting Twaamtaro to World Bank Tanzania Staffs_
+
+[Source code](https://github.com/Samweli/twaamtaro)
+
+[Platform](https://twaamtaro.org)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Isochrone Maps Creation in QGIS</title><link href="http://0.0.0.0:4000/Isochrone-Maps/" rel="alternate" type="text/html" title="Isochrone Maps Creation in QGIS" /><published>2016-09-22T00:00:00+00:00</published><updated>2016-09-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Isochrone-Maps</id><content type="html" xml:base="http://0.0.0.0:4000/Isochrone-Maps/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/isochrone_map.png)
+
+_example isochrone map showing hospitals accessibility times in minutes by car_
+
+## Isochrone Map
+I created a plugin to help map creators to use QGIS in producing isochrone maps, which are used to show accessibility of different facilities in service areas. This tool extends QGIS functionality in isochrone map creation. 
+
+The plugin is open sourced, the plugin homepage is [here](https://github.com/Samweli/isochrones)
+
+### Response
+As of August of 2019 the plugin has over 7000 downloads in the QGIS plugin repository found [here](https://plugins.qgis.org/plugins/isochrones/)
+
+### Links
+
+[Plugin repository](https://plugins.qgis.org/plugins/isochrones/)
+
+[Source code](https://github.com/Samweli/isochrones)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Developing Flood Maps</title><link href="http://0.0.0.0:4000/Flood-Maps/" rel="alternate" type="text/html" title="Developing Flood Maps" /><published>2016-07-22T00:00:00+00:00</published><updated>2016-07-22T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Flood-Maps</id><content type="html" xml:base="http://0.0.0.0:4000/Flood-Maps/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/flood_map.png)
+
+## Floods in Dar es salaam
+
+Dar es salaam is one of the fastest growing cities in Africa, it has a 5 million population and 5.6% percent growth rate per year, it is also one of the most important economic centers in Tanzania regions. This indicates that the city should get prepared in all social and economical aspects to accommodate well the population.
+	
+For the past years the city has been overwhelmed by the growth rate of the population leading to inadequate public services provision, unequal resources sharing such as water, electricity and a dormant infrastructure. The latter one has been one of the major cause for floods in the city.
+
+Due to rapid increase in population and settlements, the city has struggled to provide good infrastructure, this has hindered mobility in the city but has also largely contribute to lack of good water flow during raining seasons hence causing flooding. 
+
+
+### Floods Map Tool
+
+In relation to the flood problem in Dar es salaam, I made an effort to help the society in reporting of the floods events, believing this will enabled measuring floods impact and foster robust response during raining seasons.
+
+I developed an online flood map, Inspired by [flood map india](https://osm-in.github.io/flood-map/), the tool
+that shows flooded features in realtime as reported by map users, this is crowdsourced based effort to map inundated features in Dar es salaam.
+
+[link](http://samweli.github.io/flood-map/)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Code for Resilience</title><link href="http://0.0.0.0:4000/Code-for-Resilience/" rel="alternate" type="text/html" title="Code for Resilience" /><published>2016-05-30T00:00:00+00:00</published><updated>2016-05-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Code-for-Resilience</id><content type="html" xml:base="http://0.0.0.0:4000/Code-for-Resilience/"><![CDATA[![Code for Resilience Dar es salaam kickoff](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/code-for-resilience.png)
+
+## Code for Resilience Dar es salaam
+
+Dar es Salaam and Stone Town are the two primary cities of Mainland Tanzania and Zanzibar, with populations of 5.5 million and 150,000 respectively. Each of these cities and their country have unique challenges and hazards. Dar es Salaam for instance is challenged by bi-annual flooding, impacting many thousands of its citizens every year. In response to this, the World Bank, GFDRR, Humanitarian OpenStreetMap Team and the Red Cross are supporting the Tanzanian Commission of Science and Technology, Buni Innovation Hub, Dar es Salaam City Council, Ardhi University and the University of Dar es Salaam with a community mapping for flood resilience project, Ramani Huria. 
+
+In coordinating all of these actors, Ramani Huria has leveraged the skills of over 100 community members, 150 students, collecting data in the most flood prone neighbourhoods of Dar es Salaam, making maps and underlying data freely available for Dar es Salaam.
+
+As part of the World Bank team, I supervised the Code for Resilience fellows and mentored them. Each of the fellows was assigned a problem statement (project)  from which they had to design and implement a solution.
+
+Each of these projects and others, such as 3D printing weather stations from recycled plastic and automating the delivery of population statistics, were initiated on the 30th of January at the Buni Innovation Hub in Tanzania. This event incorporated Code for Resilience Fellows, from the University of Dar es Salaam and experts from Dar es Salaam City Council, all working together to develop these applications. It offers a bright future for collaboration and a more resilient Tanzania!
+
+![Me interviewed for Code for Resilience Tanzania Program](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/cfr_interview.jpg-large)
+_Me interviewed for Code for Resilience Tanzania Program_
+
+[Video](https://www.youtube.com/watch?v=KYnkZE9r0UQ&t=6s)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Collection of Daladala Routes</title><link href="http://0.0.0.0:4000/Daladala-Routes/" rel="alternate" type="text/html" title="Collection of Daladala Routes" /><published>2016-04-30T00:00:00+00:00</published><updated>2016-04-30T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Daladala-Routes</id><content type="html" xml:base="http://0.0.0.0:4000/Daladala-Routes/"><![CDATA[![Dar es salaam transport routes (Bus routes in red)](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/bus_routes.png)
+
+_Map of public transport in Dar es salaam [link](https://api.mapbox.com/styles/v1/samtwesa/cijptupyz002d94kq81o26eww.html?fresh=true&title=true&access_token=pk.eyJ1Ijoic2FtdHdlc2EiLCJhIjoiZTc1OTQ4ODE0ZmY2MzY0MGYwMDNjOWNlYTYxMjU4NDYifQ.F1zCcOYqpXWd4C9l9xqvEQ#19.3/-6.816097/39.280324/0)_
+
+## Dar es salaam Transport
+Dar es Salaam's public transport systems is mainly centred around Daladala buses. In addition there is a train, ferry, and BRT system.
+
+As part of Ramani Huria team, In 2015 We worked together with [ally](https://www.door2door.io) (mobility based company) to map the entire public transport system in Dar es Salaam.
+
+The main activities were to organise and assign the mappers bus routes to collect.
+
+
+![Mappers](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/daladala_mapping.png)
+
+_Mappers boarding Daladala buses to map routes_
+
+You can watch the bus routes mapping [here](https://demo.door2door.io/DAR-TYC-tracking/index.html)
+
+
+Wiki for the project can be found here[Transport wiki](https://wiki.openstreetmap.org/wiki/Dar_es_Salaam/Transport)]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Climate Action Hackathon</title><link href="http://0.0.0.0:4000/Climate-Action-Hackathon/" rel="alternate" type="text/html" title="Climate Action Hackathon" /><published>2016-03-29T00:00:00+00:00</published><updated>2016-03-29T00:00:00+00:00</updated><id>http://0.0.0.0:4000/Climate-Action-Hackathon</id><content type="html" xml:base="http://0.0.0.0:4000/Climate-Action-Hackathon/"><![CDATA[![](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/undp-hackathon.jpeg)
+
+## The Last Mile
+That was the buzzword for the hackathon carrying a meaning that after all the years of collecting, organizing and storing climate data, it is now time for technology to make use of them and provide cutting edge applications.
+
+The United Nations Development Programme (UNDP) launched this for the application developers to create new web or mobile applications that give out weather data in areas trying to adapt to climate change in the region.
+
+Under the UNDP programme called Climate Information for Resilient Development in Africa (CIRDA), software developers were invited to Livingstone, Zambia to participate.
+
+The developers formed teams to create prototype mobile and information-system-based applications and technological solutions to share actionable weather and climate information with a variety of stakeholders, sectors and end-users.
+
+As a result different applications and platforms were prototyped [here](https://climateaction.io/) is the list.
+
+I had a chance to go this hackathon, it was wonderful to meet people who have been working on useful information on climate. It was so amazing when we got to realize how much some of the companies have worked on providing useful tools around gathered climate data.
+
+Me and three other developers worked on developing a framework that we aimed to allow regional experts to communicate their knowledge with local communities. We call it [ClimateFrame](https://github.com/climate-action-hackathon/ClimateFrame)
+
+![ClimateFrame group working on the prototype](https://raw.githubusercontent.com/samweli/jekyll-now/master/images/climate-frame-undp.jpg)
+_ClimateFrame group on action_
+
+#### Other Groups on Action
+![cah_image](https://c3.staticflickr.com/2/1540/25222387034_ce974f0299_z.jpg)
+![cah_image2](https://c7.staticflickr.com/2/1506/25552275070_77cef53b62_c.jpg)
+![cah_image3](https://c1.staticflickr.com/2/1466/25552301320_4f17a8f354.jpg)
+
+### Presenting Partners
+
+The CIRDA Programme
+UNDP’s Programme on Climate Information for Resilient Development in Africa (CIRDA) supports Climate Information and Early-Warning Systems Projects in 11 of Africa’s Least Developed Countries in their missions to save lives and improve livelihoods. By building capacity to issue extreme weather warnings, sharing new technological advances in weather monitoring and forecasting, and facilitating innovative partnerships with the private sector, the programme works to foster regional cooperation, support strong institutions and build resiliency to climate change. 
+
+The Brown Institute for Media Innovation
+The Brown Institute was established in 2012 by a gift from Helen Gurley Brown, long time editor of Cosmopolitan Magazine, in honor of her late husband David Brown, a filmmaker producing works like Jaws and Driving Miss Daisy. The Institute is a bi-coastal collaboration between Stanford’s School of Engineering and Columbia’s Graduate School of Journalism. Its mission is to sponsor thinking, building and speculating about how stories are discovered and told in a networked, digitized world.
+
+The International Research Institute for Climate and Society (IRI)
+IRI was established in 1996 by the U.S. National Oceanic and Atmospheric Administration (NOAA) and Columbia University as the world’s first international institute with a mission to apply climate science in the service of society. IRI uses a science-based approach to enhance society’s capability to understand, anticipate and manage the impacts of climate in order to improve human welfare and the environment, especially in developing countries.]]></content><author><name>Samweli Mwakisambwe</name><email>smwltwesa6@gmail.com</email></author><summary type="html"><![CDATA[]]></summary></entry></feed>
